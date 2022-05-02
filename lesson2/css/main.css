@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+h1 {
+  background-color:navy;
+  color: white;
+  font-family: "Bree serif", serif;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+h2,
+h3 {
+  background-color: white;
+  color: darkblue;
+  text-align: center;
+  font-family: "Bree serif", serif;
+  font: size 1.5em;
+}
+
+.allColumns {
+  float: left;
+  width: 33.3%;
+  padding: 20px;
+}
+
+p {
+  font-family: "Expletus sans", cursive;
+  font-size: 1.5erm;
+  text-align: justify;
+  padding: 20px;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+footer {
+  background-color: navy;
+  color:white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Averia Sans Libre", cursive;
+  padding: 25px;
+}
+@media screen and (max-width: 768px) {
+  .allColumns {
+    width: 100%;
+  }
+}
