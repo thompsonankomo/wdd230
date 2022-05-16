@@ -1,0 +1,146 @@
+body {
+    max-width: 1000px;
+}
+
+header {
+    background-color:rgba(0, 0, 0, 0.2);
+    width: 1000px;
+}
+
+header h1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    color:orangered;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    border: #555;
+}
+
+.date,
+aside {
+    margin: 0.4rem;
+    border: 1px solid #bbb;
+    padding: 0.75em;
+    background-color: #eee;
+}
+
+#lastModified {
+    text-align: center;
+    font-size: smaller;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    border: 1px solid;
+    margin: 0 auto;
+}
+
+.col1,
+.col2,
+.col3,
+.col4 {
+    width: 148px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+    border: 1px solid black;
+    padding: 40px;
+    margin: 10px;
+}
+
+nav {
+    width: 1000px;
+
+}
+nav ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+nav button{
+    margin:.2rem 2vw;
+    background-color: transparent;
+    border:none;
+    font-size: 2rem;
+    color:#555;
+
+}
+nav ul li a {
+    display: block;
+    padding:.8rem 2vw;
+    text-decoration: none;
+    border-top:1px solid rgba(0,0,0,0.5);
+}
+
+nav ul li a:hover{
+    background-color: rgba(0, 0, 0,0.8);
+
+}
+nav ul  li.active a{
+    background-color: #444;
+}
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 1000px;
+    margin: 0 auto;
+    color: orangered;
+    font-size: 2rem;
+    border: 2px solid;
+}
+
+address {
+    text-align: center;
+    font-size: medium;
+    color: navy;
+}
+
+/* Small/Phone View ***************/
+nav {
+    margin: 0 auto;
+    max-width: 760px;
+    background-color:#eee;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li:first-child {
+    display: block;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a.ham::before {
+    content: "🍔 ";
+}
+
+.navigation a:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.responsive li {
+    display: block;
+}
+
+.responsive a.ham::before {
+    content: "❌ ";
+}
+
