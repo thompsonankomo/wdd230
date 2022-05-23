@@ -1,5 +1,15 @@
-@media only screen and (min-width: 35rem) {
-  
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "hero"
+      "news-release"
+      "spotlight1 spotlight2"
+      "join"
+      "events weather";
+  }
+
   nav button {
     display: none;
   }
@@ -25,7 +35,7 @@ nav ul#primaryNav {
 
   .navigation li {
     display: block;
-    /* change state in small view */
+
     flex: 1 1 auto;
   }
 
@@ -36,4 +46,36 @@ nav ul#primaryNav {
   .navigation li:first-child {
     display: none;
   }
+}
+#events {
+  background-color: aquamarine;
+  grid-area: events;
+}
+#weather {
+  background-color: azure;
+  grid-area: weather;
+}
+#join {
+  background-color: greenyellow;
+  grid-area: join;
+}
+#hero {
+  background-color: aqua;
+  grid-area: hero;
+}
+#news-release {
+  background-color: blue;
+  grid-area: news-release;
+}
+#spotlight1 {
+  background-color: blueviolet;
+  grid-area: spotlight1;
+}
+#spotlight2 {
+  background-color: black;
+  grid-area: spotlight2;
+}
+#spotlight3 {
+  background-color: forestgreen;
+  grid-area: spotlight3;
 }
