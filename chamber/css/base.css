@@ -1,203 +1,190 @@
-body {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 header {
-  background-color: orange;
-  text-align: justify;
-  color: navy;
-  font-family: Arial;
-  text-decoration: none;
-  border: #555;
-}
-header nav {
-  background-color: none;
-}
-
-.date,
-aside {
-  margin: 0 auto;
-  border: 1px solid #bbb;
-  padding: 0.75em;
-  background-color: orange;
-  color: whitesmoke;
-}
-
-#lastModified {
-  text-align: center;
-  font-size: smaller;
-}
-.container {
+  padding: 10px;
+  margin: 0;
+  background-color: rgb(3, 88, 3);
+  color: white;
   display: grid;
-  grid-gap: 7px;
-  max-width: 960px;
-  height: 100vh;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "events hero hero spotlight1 "
-    "weather hero hero spotlight2"
-    "join news-release news-release spotlight3";
+  text-align: center;
+  text-shadow: #86ccb1;
+  text-indent: 20px;
+
 }
 
-#events {
-  background-color: aquamarine;
-  grid-area: events;
+h1 {
+  margin: 0;
+  font-size: 1em;
+  font-family: 'Arimo', sans-serif;
 }
-#weather {
-  background-color: azure;
-  grid-area: weather;
+
+h2,
+h3,
+h4 {
+  background-color: #05680d;
+  color: white;
+  border-radius: 16px;
+  font-family: 'Arimo', sans-serif;
 }
-#join {
-  background-color: greenyellow;
-  grid-area: join;
+
+picture .logo {
+  border-radius: 50%;
 }
-#hero {
-  background-color: aqua;
-  grid-area: hero;
+
+#head {
+  display: flex;
+  justify-content: space-around;
 }
-#news-release {
-  background-color: blue;
-  grid-area: news-release;
-}
-#spotlight1 {
-  background-color: blueviolet;
-  grid-area: spotlight1;
-}
-#spotlight2 {
-  background-color: aquamarine;
-  grid-area: spotlight2;
-}
-#spotlight3 {
-  background-color: rgb(220, 228, 220);
-  grid-area: spotlight3;
-}
-nav {
-  background-color: aqua;
+
+.social {
+  padding: 10px;
+  margin-top: 4px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
 }
 
 nav ul li a {
   display: block;
   padding: 0.8rem 2vw;
   text-decoration: none;
-  border-top: 1px solid navy;
+  color: #b8c7c1;
+  border-top: #21332c;
+  justify-content: flex-end;
 }
 
 nav ul li a:hover {
-  background: color rgb(189, 95%, 29%);
+  background-color: orangered;
 }
 
-nav ul li.active a {
-  background-color: #444;
-}
-.social {
-  float: right;
-}
-
-footer {
-  background-color: orange;
-  width: 960px;
-  margin: 0 auto;
-  color: navy;
-  font: size 1rem;
-  border: none;
-  text-align: left;
-  font-family: arial;
-  font-size: 25px;
-}
-
-address {
-  text-align: end;
-  font-size: small;
-  color: darkred;
-}
-
-/* Small/Phone View ***************/
-nav {
-  margin: 0 auto;
-  max-width: 960px;
-  background-color: #eee;
-}
-
-.navigation {
-  list-style: none;
+nav ul {
+  list-style-type: none;
   padding: 0;
-}
-
-.navigation li:first-child {
-  display: block;
-}
-
-.navigation li {
-  display: none;
-}
-
-.navigation a {
-  display: block;
-  padding: 0.75rem;
-  text-align: left;
-  text-decoration: none;
-  color: orange;
-  font-weight: 700;
-  transition: 0.5s;
-  font-size: clamp(1rem, 2vmin, 1.5rem);
-}
-
-.navigation a.ham::before {
-  content: "🍔 ";
-}
-
-.navigation a:hover {
-  color: white;
-  background-color: black;
-}
-
-.responsive li {
-  display: block;
-}
-
-.responsive a.ham::before {
-  content: "❌ ";
-}
-
-main {
-  max-width: 820px;
-  margin: 0 auto;
-}
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  text-shadow: 0.25rem 0.25rem 0.75rem #333;
-  margin-bottom: 1rem;
-}
-
-.herodiv {
-  margin: 10px auto;
-  position: relative;
-}
-
-h2 {
-  margin: 0 0 0.5rem;
-  border-bottom: 1px solid #000;
-}
-
-p {
   margin: 0;
 }
 
-.stats {
-  position: absolute;
-  top: 25px;
-  right: 50px;
-  background: radial-gradient(#eee, #4567aa);
-  border: 1px solid #000;
-  padding: 1.5rem;
-  box-shadow: 0 0 30px #333;
-  opacity: 0.9;
+nav button {
+  margin: 0.2rem 1vw;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: yellow;
 }
 
-.stats span {
-  font-style: italic;
-  font-weight: 700;
+nav ul {
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+
+header #currentDate {
+  margin: 0.5em;
+  padding: 0.3em;
+  background-color: rgb(25, 218, 25);
+
+
+}
+
+main {
+  margin: 0;
+}
+
+main .hero {
+  width: 96%;
+
+}
+
+main .hero #myphoto-hero img {
+  width: 96%;
+  margin: 2% 2% 2% 2%;
+
+}
+
+main .hero h3 {
+  text-align: center;
+  background-color: rgb(4, 117, 4);
+  color: white;
+}
+
+
+main div {
+
+  background-color: rgba(241, 235, 235, 0.952);
+  padding-bottom: 7px;
+}
+
+main .news h3 {
+  text-align: center;
+}
+
+.spotlights {
+  display: grid;
+  padding-bottom: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.spotLight1,
+.spotLight2,
+.spotLight3 {
+
+  padding: 1px;
+  margin: 5px;
+  padding-bottom: 1em;
+
+}
+
+main .spotLight1 {
+  text-align: center;
+}
+
+main .spotLight1 img {
+  margin-top: 4px;
+}
+
+.spotLight3 {
+  display: none;
+}
+
+.join
+ {
+  text-align: center;
+  font-family:'Merriweather' ;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+}
+
+.event h3 {
+  text-align: center;
+}
+
+main .weather {
+  width: 95%;
+  text-align: center;
+  color: black;
+}
+
+main .weather img {
+  width: 100%;
+  height: 150px;
+  text-overflow: justify-content;
+  font-family: 'Merriweather', serif;
+
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(3, 90, 3);
+  color: white;
+
+}
+
+.bottomLogo img {
+  margin-top: 15px;
+  border-radius: 50%;
 }

@@ -1,51 +1,83 @@
-@media only screen and(min-width:960px){
-   nav ul li a {
-       padding: .5rem 1rem;
-   } 
-}
-.container {
-    display: grid;
-    grid-gap:7px;
-    max-width:  100%;;
-    height:100vh;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "events hero hero spotlight1 "
-    "weather hero hero spotlight2"
-    "join news-release news-release spotlight3"
+@media only screen and (min-width: 57em){
+    nav button{display: none;}
+
+    header .head {
+        display:grid;
+        grid-template-columns: .1fr .6fr 1fr .07fr .08fr;
+    }    
+    .logo {
+        margin: 1em;
+        margin-bottom: 0;
+    }
+    .social {
+        margin-top: 25px;
+        padding: 0;
+        order: 1;
+    }
+    h1 {
+        margin-top: 15px;
+       font-size: x-large;
+    }
+    nav ul#primaryNav {
+		display: flex;
+	}
+	/*#primaryNav li {
+		display: block; /* change state in small view */
+	/*	flex: 1 1 auto;
+	}*/
+	#primaryNav a {
+		text-align: center;
+	}
+	#primaryNav li:first-child {
+		display: none;
+	}
+    /*------main-----*/
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    main .event {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    main .hero{
+        grid-column: 2/4;
+        grid-row: 1 /3;
+    }
+    
+    .weather {
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+    .join {
+        grid-row: 3;
+        grid-column: 1/2;
+    }
+    .news {
+        grid-row: 3;
+        grid-column: 2/4;
+        text-align: center;       
+        
+    }
+    .spotlights {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-row: 1/4;
+        grid-column: 4/5;
+
+    }
+    .spotLight1{
+        grid-row: 1;
+    }
+
+    .spotLight2 {
+        grid-row: 2;
+    }
+
+    .spotLight3 {
+       display: block;
+        grid-row: 3;
+    }
 
 
-}
-
-#events{
-    background-color: aquamarine;
-    grid-area: events;
-}
-#weather{
-    background-color: azure;
-    grid-area: weather;
-}
-#join{
-    background-color: greenyellow;
-    grid-area: join;
-}
-#hero{
-    background-color: aqua;
-    grid-area: hero;
-
-}
-#news-release{
-    background-color: blue;
-    grid-area: news-release;
-}
-#spotlight1{
-    background-color: blueviolet;
-    grid-area: spotlight1;
-}
-#spotlight2{background-color:rgba(236, 216, 216, 0.1);
-grid-area: spotlight2;}
-#spotlight3{
-    background-color: forestgreen;
-    grid-area: spotlight3;   
-}
+    }
