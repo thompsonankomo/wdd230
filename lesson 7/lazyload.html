@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive loading of images</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Progressive loading of images with Placeholder Script</h1>
+        <picture> <img src="images/byocity.jpg" data-src="Image/image1.jpg" alt="image of byo city" loading="lazy" ></picture>
+        <picture><img src="Images/byocitytruck.jpg" data-src="Image/image2.jpg" alt="bulawayo city truck" loading="lazy"></picture>
+        <picture><img src="Images/cnc_machine.jpg" data-src="Image/image3.jpg" alt="cnc wood working machine" loading="lazy"></picture>
+        <picture><img src="images/edgebander.jpg" data-src="Image/image4.jpg" alt="edge bander machine for woodworking " loading="lazy"></picture>
+        <picture><img src="images/mum_dad.jpg" data-src="Image/image5.jpg" alt="image of mum and dad " loading="lazy"></picture>
+        <picture><img src="images/max.jpg" data-src="Image/image6.jpg" alt="image of myself max and our wives" loading="lazy"></picture>
+    </main>
+    <script src="js/lazy.js"></script>
+</body>
+
+</html>
