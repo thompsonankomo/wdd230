@@ -9,7 +9,7 @@ h1 {
 main picture img {
    display: block;
    margin: 0 auto;
-   filter: blur(.003em);
+   filter: blur(0em);
    transition: filter 0.7s;
 }
 main{
