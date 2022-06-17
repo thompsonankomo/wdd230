@@ -1,3 +1,9 @@
+body{max-width: 1200px;
+  max-height: 100vh;
+}
+
+
+
 header {
   padding: 10px;
   margin: 0;
@@ -82,7 +88,8 @@ nav ul.open {
 header #currentDate {
   margin: 0.5em;
   padding: 0.3em;
-  background-color: rgb(25, 218, 25);
+  background-color: #02ecd8;
+  color: black solid;
 
 
 }
@@ -135,8 +142,12 @@ main .news h3 {
   margin: 5px;
   padding-bottom: 1em;
 
-}
 
+}
+main{
+  width: 1300px;
+  gap:10px;
+}
 main .spotLight1 {
   text-align: center;
 }
@@ -144,10 +155,28 @@ main .spotLight1 {
 main .spotLight1 img {
   margin-top: 4px;
 }
-
+main.main-item{
+  width: 400px;
+}
+ #mainphoto{
+  background-color: yellow;
+  margin:0;
+  text-align: right;
+  width:300px;
+  height: 400px;
+}
 .spotLight3 {
   display: none;
 }
+.khami-ruins{
+  background: lightgreen;
+  width:550px;
+}
+ .khami-ruins img{
+  float:left;
+  width: 550px;
+  height: 400px;
+ }
 
 .join
  {
@@ -167,6 +196,7 @@ main .weather {
   width: 95%;
   text-align: center;
   color: black;
+  border-radius: 16px;
 }
 
 main .weather img {
@@ -176,11 +206,17 @@ main .weather img {
   font-family: 'Merriweather', serif;
 
 }
+.byo-airport{
+  grid-column: auto;
+  -ms-grid-row-span: inherit;
+  
+}
 
 footer {
   text-align: center;
   background-color: rgb(3, 90, 3);
   color: white;
+  width: 1300px;
 
 }
 

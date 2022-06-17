@@ -21,10 +21,7 @@
     nav ul#primaryNav {
 		display: flex;
 	}
-	/*#primaryNav li {
-		display: block; /* change state in small view */
-	/*	flex: 1 1 auto;
-	}*/
+
 	#primaryNav a {
 		text-align: center;
 	}
