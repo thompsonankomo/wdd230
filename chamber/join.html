@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bulawayo Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/medium.css" rel="stylesheet">
+    <link href="css/large.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Arimo:ital@1&family=Merriweather:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="head">
+            <picture class="logo"><img src="images/chamber of commerce.png" alt="logo" width="150px" height="100px">
+            </picture>
+            <h1>Bulawayo Chamber of Commerce</h1>
+
+            <div class="social">
+                <a href="https://www.facebook.com"><img src="images/facebook-new (1).png" alt="facebook icon"
+                        width="60px" height="60px"></a>
+                <a href="https://www.twittercom"><img src="images/twitter.png" alt="twitter icon" width="60px"
+                        height="60px"></a>
+            </div>
+
+            <nav>
+                <button id="hamburgerBtn"><span>&#9776;</span></button>
+
+                <ul id="primaryNav">
+
+                    <li><a href="index.html">Home|Bulawayo Chamber of Commerce</a></li>
+                    <li><a href="discover.html">Discover Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="join.html">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <span id="currentDate"></span><br>
+        <span id="banner"></span>
+     </header>
+     <h1>Business Proposal Aplication</h1>
+     <form method="get" action="thanks.html">
+       <fieldset>
+         <legend>Business Information</legend>
+         <label> First Name*<input type="text" name="fname" required /></label>
+         <label class="top">
+           Last Name*<input type="text" name="lname" required
+         /></label>
+         <label class="top">
+           Phone<input type="tel" name="phone" placeholder="1235551234"
+         /></label>
+         <label class="top">
+           Email*<input
+             type="email"
+             name="email"
+             placeholder="someone@gmail.com"
+             required
+         /></label>
+         <label class="top">
+           Website*<input type="url" name="url" placeholder="https://"
+         /></label>
+       </fieldset>
+       <fieldset>
+         <legend>Business Information</legend>
+         <div>Audience</div>
+         <label class="sbs"
+           ><input
+             type="radio"
+             name="audience"
+             value="beginner"
+           />Beginner Business</label
+         >
+         <label class="sbs"
+           ><input
+             type="radio"
+             name="audience"
+             value="subsistence"
+           />Subsistence</label
+         >
+         <label class="sbs"
+           ><input
+             type="radio"
+             name="audience"
+             value="commercial"
+           />Commercial</label
+         >
+         <div>Logistics Needed</div>
+         <label class="sbs"
+           ><input type="checkbox" name="waarehouse" value=" yes" />Warehouse Management</label
+         >
+         <label class="sbs"
+           ><input type="checkbox" name="operations" value=" yes" />Operations Management Experience </label
+         >
+         <label class="sbs"
+           ><input
+             type="checkbox"
+             name="stock"
+             value=" yes"
+           />Stock Controll</label
+         >
+         <label class="sbs"
+           ><input type="checkbox" name="marketing" value=" yes" />Marketing and Sales Management</label
+         >
+       </fieldset>
+       <fieldset>
+         <legend>Funding</legend>
+         <label class="top"
+           >Anticipated Completion Date<input type="date" name="completeDate"
+         /></label>
+         <label class="top">
+            Type Of Business
+            <select name="Business">
+              <option value="">Please Select</option>
+              <option value="ranching">Cattle Ranching</option>
+              <option value="dairy">Dairy Farming</option>
+              <option value="poultry">Poultry  Farming</option>
+              <option value="pigery">Pig Rearing</option>
+              <option value="hardware">Hardware and Construction</option>
+              <option value="manufacturing">Manufacturing and Retailing</option>
+              <option value="clothing">Fashion and Clothing</option>
+              <option value="education">Education</option>
+            </select>
+          </label>
+         </label>
+         <label class="top">Partners<input type="number" name="partners" /></label>
+       </fieldset>
+       <input type="submit" value="Propose my Business venture" class="submitBtn" />
+     </form>
+    </main>
+    <footer>
+        <div class="last">
+            <div class="logoside">
+                <picture class="bottomLogo">
+                    <img src="images/chamber of commerce.png" alt="logo" width="150px" height="100px">
+                </picture>
+
+                <h4 class="name">Bulawayo Chamber of Commerce</h4>
+                <p class="address">42 Tongo Street/ Selbourne Way, Selbourne Park, Bulawayo, Zimbabwe</p>
+            </div>
+            <div class="info">
+                <p>operations@byochamberofcommerce.org</p>
+                <p class="phoneNo">+263 776 708 715</p>
+            </div>
+        </div>
+        <hr>
+        <div class="update">
+            <p>
+                &copy;<span id="year"></span> .:&brvbar;:Thompson A Nkomo
+                .:&brvbar;:Bulawayo, Zimbabwe
+                Updated: <span id="datemod"></span></p>
+        </div>
+
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/windchill.js"></script>
+    <script src="js/modify.js"></script>
+</body>
+
+</html>
