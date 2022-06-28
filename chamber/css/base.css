@@ -1,5 +1,5 @@
 body {
-  max-width: max-content;
+  max-width:100%;
   max-height:max-content;
 }
 
@@ -13,7 +13,7 @@ header {
   text-shadow: #86ccb1;
   text-indent: 20px;
   width:100%;
-  height: min-content;
+  height:auto;
 
 }
 
@@ -39,8 +39,9 @@ h4 {
   
 }
 
-picture .logo {
+ .logo img {
   border-radius: 50%;
+  height: 100px;
 }
 
 #head {
@@ -97,8 +98,9 @@ nav ul.open {
 header #currentDate {
   margin: 0.5em;
   padding: 0.3em;
-  background-color:rgba(213, 235, 10, 0.966);
+  background-color:rgba(12, 166, 226, 0.966);
   color: black solid;
+  width:auto;
 
 
 }
@@ -314,10 +316,10 @@ footer {
 
 }
 
-.bottomLogo img {
+footer img {
   margin-top: 15px;
-  border-radius: 10%;
-  margin: 0 0 0 2%;
+  border-radius: 50%;
+  margin: 6% 0 0 2%;
 }
 
 /*FORM*/
@@ -453,3 +455,641 @@ form label.top input:required {
 form label .top input:required:valid {
   border-left: blue;
 }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	margin: 0 auto;
+	border: 1px solid #bbb;
+	padding: 0.5rem;
+	width: 96px;;
+	background-color: #eee;
+	font-family: "Caveat", cursive;
+}
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #bbb;
+	text-align: center;
+  display: flex;
+}
+
+.menu button {
+	padding: 1rem;
+}
+
+article,
+section {
+	margin: 0.75rem;
+  width:100%;
+  height: auto;
+}
+
+section {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem;
+	background-color: #ccc;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: flex;
+	align-items: center;
+}
+
+.grid section {
+	flex-direction: column;
+	text-align: center;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.list section {
+	flex-direction: row;
+	justify-content: left;
+}
+
+.list section > * {
+	margin: 0 1rem;
+	text-align: left;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 0.9rem;
+}
+
+img {
+	height: 100%;
+	width: 100%; /* Images are jerks - Seattle*/
+}
+
+@media (min-width: 700px) {
+	.list section img {
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
