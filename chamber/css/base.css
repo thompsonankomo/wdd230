@@ -58,6 +58,11 @@ h4 {
   
 
 }
+.social img{
+  width:50px;
+  height:50px;
+  margin: 0 0 0 2%;
+}
 
 nav ul li a {
   display: block;
@@ -159,7 +164,7 @@ main .news h3 {
 
 main {
   width:100%;
-  gap: 2%;
+  gap: 3%;
 }
 
 main .spotLight1 {
@@ -319,7 +324,9 @@ footer {
 footer img {
   margin-top: 15px;
   border-radius: 50%;
-  margin: 6% 0 0 2%;
+  margin: 0 0 0 2%;;
+  width:150px;
+  height:100px
 }
 
 /*FORM*/
@@ -545,8 +552,8 @@ section a {
 }
 
 img {
-	height: 100%;
-	width: 100%; /* Images are jerks - Seattle*/
+	height:100% ;
+	width:80%; /* Images are jerks - Seattle*/
 }
 
 @media (min-width: 700px) {
