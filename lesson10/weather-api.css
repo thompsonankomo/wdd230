@@ -2,7 +2,7 @@
 *{margin: 0 auto;
 padding:0;
 text-align: center;
-width:80%;
+width:90%;
 height:60%;
 border:5px;
 }
@@ -14,10 +14,10 @@ p{
 }
 main{
     background:none;
-    border-style: dotted;
+    border-style: solid;
 }
 h1,h2{
-    background:white;
+    background:grey;
     color:navy;
     text-align: center;
     border: 1px ;

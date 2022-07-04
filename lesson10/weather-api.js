@@ -5,7 +5,7 @@ const captionDesc = document.querySelector('figcaption');
 const url = 'https://api.openweathermap.org/data/2.5/weather?q=Fairbanks&units=imperial&appid=2f6fe2ce18e08fbe685aeb9907d5af84'
 
 function displayResults(weatherData) {
-    currentTemp.innerHTML = `${weatherData.main.temp.toFixed(2)}`;
+    currentTemp.innerHTML = `${weatherData.main.temp.toFixed(1)}`;
     const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
     const desc = weatherData.weather[0].description;
     

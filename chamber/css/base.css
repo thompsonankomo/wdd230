@@ -9,7 +9,7 @@
 
 
 body {
-  max-width:100%;
+  max-width:96;
   max-height:max-content;
 }
 
@@ -525,7 +525,7 @@ section {
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	align-items: center;
 }
 
