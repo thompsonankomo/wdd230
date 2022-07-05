@@ -13,7 +13,8 @@
     <link rel="shortcut icon" href="favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Arimo:ital@1&family=Merriweather:ital,wght@1,300&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Arimo:ital@1&family=Merriweather:ital,wght@1,300&display=swap"
         rel="stylesheet">
 </head>
 
@@ -33,19 +34,21 @@
                 <button id="hamburgerBtn"><span>&#9776;</span></button>
 
                 <ul id="primaryNav">
-                    <li><a href="index.html"class="active" >Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="discover.html" target="_self">Discover Us</a></li>
                     <li><a href="directory.html" target="_self">Directory</a></li>
                     <li><a href="join.html" target="_self">Join Us</a></li>
                     <li><a href="contact.html" target="_blank">Contact Us</a></li>
                     <li><a href="aboutus.html" target="_self">About Us</a></li>
+                    <li><a href="index.html" target="_self">Home</a></li>
+
                 </ul>
             </nav>
         </div>
 
         <span id="currentDate"></span><br>
         <span id="banner"></span>
-      </header>
+    </header>
 
     <main>
         <div class="hero">
@@ -77,12 +80,14 @@
 
         </div>
 
-        <div class="weather">
-            <img src="images/Bulawayo Weather.png" alt="picture of weather">
-            <h3>Weather</h3>
-            <label>Temperature: <span id="tempF">40</span> &deg;F</label><br><br>
-            <label>Wind Speed: <span id="speed">10 </span>mph</label><br><br>
-            <label>Wind Chill: <span id="windchill"></span></label>
+        <div class="weatherWidget">
+            <p>The current temperature in Bulawayo, Zimbabwe is <span id="current-temp"></span> &deg;C</p>
+            <h2>Current Condition Icon</h2>
+            <figure>
+                <img src="" alt="" id="weather-icon" />
+                <figcaption></figcaption>
+            </figure>
+
         </div>
 
         <div class="news">
@@ -168,6 +173,7 @@
     <script src="js/windchill.js"></script>
     <script src="js/modify.js"></script>
     <script src="js.directory.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
