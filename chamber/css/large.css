@@ -28,10 +28,11 @@
 	#primaryNav li:first-child {
 		display: none;
 	}
-    /*------main-----*/
+
     main {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
+        width: justify-end;
     }
     main .event {
         grid-column: 1/2;

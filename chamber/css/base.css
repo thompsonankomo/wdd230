@@ -5,11 +5,8 @@
 }
 
 
-
-
-
 body {
-  max-width:96;
+  max-width:justify;
   max-height:max-content;
 }
 
@@ -22,7 +19,7 @@ header {
   text-align: center;
   text-shadow: #86ccb1;
   text-indent: 20px;
-  width:100%;
+  width:justify;
   height:auto;
 
 }
@@ -59,6 +56,7 @@ h4 {
 #head {
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .social {
@@ -122,6 +120,7 @@ header #currentDate {
   background-color:rgba(12, 166, 226, 0.966);
   color: black solid;
   width:auto;
+  overflow: hidden;
 
 
 }
@@ -164,6 +163,8 @@ main .news h3 {
   padding-bottom: 0;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
+  border: #21332c thin;
+  border-radius: 10px;
 
 }
 
@@ -179,7 +180,7 @@ main .news h3 {
 }
 
 main {
-  width:100%;
+  width:justify;
   gap: 3%;
 }
 
@@ -249,6 +250,10 @@ main .weather img {
   text-overflow: justify-content;
   font-family: 'Merriweather', serif;
 
+}
+.weatherWidget{
+  border: #21332c line;
+  border-radius: 5px;
 }
 
 .byo-airport {
@@ -328,24 +333,23 @@ picture.largecityhall figcaption{
   font-family: 'Arimo',sans-serif;
   color: blue;
 }
+.contact{
+ color:black ;
+ width: 60%;
+ height:400px;
+ align-items: center;
+ margin:0;
+}
+
 footer {
   text-align: center;
   background-color: rgb(6, 82, 18);
   color: white;
-  width: 100%;
-  margin: 2% 2% 2% 0;
+  width:justify;
+
 
 }
 
-footer img {
-  margin-top: 15px;
-  border-radius: 50%;
-  margin: 0 0 0 2%;;
-  width:150px;
-  height:100px
-}
-
-/*FORM*/
 form field {
   margin: 2rem 0;
   border: 1px solid blue;
@@ -479,151 +483,9 @@ form label .top input:required:valid {
   border-left: blue;
 }
 
-.menu {
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	text-align: center;
+.clearfix{
+overflow: auto;
 }
-.menu button {
-	padding: 1rem;
-  background-color: var(--accent2-color);
-}
-.menu button:hover{
-  background-color: var(--nav-hover-link-color);
-  transition: 0.5s;
-}
-#buttons {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    padding-top: 0;
-}
-#grid, #list{
-  display: grid;
-  margin: 10px;
-  padding: 0.5rem;
-  width: 50px;
-  height: 50px;
-}
-#grid:active,
-#list:active {
-  transform: translateY(4px);
-}
-#grid:hover div:nth-child(even),
-#grid:hover div:nth-child(odd),
-#list:hover div:nth-child(even),
-#list:hover div:nth-child(odd) {
-  background: black;
-  cursor: pointer;
-  transition: 0.5s;
-}
-#grid div,
-#list div {
-  border-radius: 4px;
-  margin: 0;
-  padding: .4rem;
-  place-self: center;
-}
-#grid div:first-child {
-  grid-row: 1;
-  grid-column: 1;
-}
-#grid div:nth-child(2) {
-  grid-row: 1;
-  grid-column: 2;
-}
-#grid div:nth-child(3) {
-  grid-row: 2;
-  grid-column: 1;
-}
-#grid div:last-child {
-  grid-row: 2;
-  grid-column: 2;
-}
-#list div:first-child {
-  grid-row: 1;
-  grid-column: 1;
-}
-#list div:nth-child(2) {
-  grid-row: 2;
-  grid-column: 1;
-}
-#list div:last-child {
-  grid-row: 3;
-  grid-column: 1;
-}
-#list div {
-  padding: .2rem 1rem;
-}
-article, section {
-	margin: 0.75rem;
-}
-section {
-	border: 1px solid black;
-	padding: 0.5rem;
-	background-color: var(--primary-color);
-  height: 20rem;
-}
-.grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	align-items: center;
-}
-.list {
-	display: flex;
-	flex-direction: column;
-}
-.list section {
-	display: flex;
-	align-items: center;
-  height: inherit;
-}
-.grid section {
-	flex-direction: column;
-	text-align: center;
-}
-.grid section > * {
-	margin: 0.1rem;
-  padding: .2rem;
-}
-.grid section img {
-  max-width: 150px;
-}
-.list section {
-	flex-direction: row;
-	justify-content: left;
-}
-.list section > * {
-	margin: 0 1rem;
-  flex: 1;
-}
-.list section img {
-	display: none;
-}
-section h3, p, a {
-  padding: 0;
-  margin: 0rem;
-}
-main div article section img {
-	height: 75px;
-	max-width: 100%;
-}
-@media screen and (min-width: 1150px){
-  .list section img {
-		display: block;
-    max-width: 200px;
-	}
-}
-@media screen and (max-width: 719px){
-  section h3, section p, section a {font-size: .6rem;}
-  .list section > * {
-    margin: 0 .2rem;
-  }
-  section {height: 12rem;}
-}
-
-
-
-
 
 
 

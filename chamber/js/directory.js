@@ -1,15 +1,13 @@
-const requestURL = '';
+const requestURL = 'https://thompsonankomo.github.io/wdd230/chamber/json/data.json';
 const grid = document.querySelector('.grid');
 
 function displaycompanies(companies) {
     // Create elements to add to the document
     let card = document.createElement('section');
     let img = document.createElement('img');
-    let url = document.createElement('a');
     let name = document.createElement('h3');
     let address = document.createElement('p');
     let phone = document.createElement('p');
-    let membership = document.createElement('p');
 
     // Build the image attributes by using the setAttribute method for the src, alt, and loading attribute values. (Fill in the blank with the appropriate variable).
     img.setAttribute('src', company.imageurl);
@@ -20,7 +18,6 @@ function displaycompanies(companies) {
     name.textContent = `${company.name}`;
     address.textContent = `${company.address}`;
     phone.textContent = `${company.phone}`;
-    membership.textContent = `Membership Level: ${company.membership_level}`;
     var linkText = document.createTextNode("Website");
     url.appendChild(linkText);
     url.title = "Website";
@@ -31,7 +28,7 @@ function displaycompanies(companies) {
     card.appendChild(name);
     card.appendChild(address);
     card.appendChild(phone);
-    card.appendChild(membership);
+
     card.appendChild(imageurl);
     card.appendChild(website)
 
