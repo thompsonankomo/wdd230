@@ -27,7 +27,7 @@ header {
 h1 {
   margin: 0;
   font-size: 1em;
-  font-family: 'Arimo', sans-serif;
+  font-family: Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -37,13 +37,13 @@ h4 {
   background-color:orangered;
   background-size:50px;;
   color: white;
-  font-family: 'Arimo', sans-serif;
+  font-family: Helvetica, sans-serif;
   text-align: center;
   
 }
 #currentDate{
   width: 40%;
-  font-family:"Merriweather", sans serif;
+  font-family: Helvetica, sans-serif;
   
 }
 
