@@ -49,7 +49,29 @@
         <span id="currentDate"></span><br>
         <span id="banner"></span>
      </header>
-     <h1>Business Proposal Aplication</h1>
+     <main>
+     <section id="signin-section">
+       <h2>Sign In</h2>
+       <form id="signin-form">
+         <label>Email: <input type="email" id="signin-email" required /></label>
+         <label>Password: <input type="password" id="signin-password" required /></label>
+         <button type="submit">Sign In</button>
+       </form>
+       <h2>Register</h2>
+       <form id="register-form">
+         <label>Email: <input type="email" id="register-email" required /></label>
+         <label>Password: <input type="password" id="register-password" required /></label>
+         <button type="submit">Register</button>
+       </form>
+       <button id="signout-btn" style="display:none;">Sign Out</button>
+       <p id="user-info"></p>
+       <div id="admin-section" style="display:none;">
+         <h3>Admin Panel</h3>
+         <button id="view-applications-btn">View Applications</button>
+         <div id="applications-list"></div>
+       </div>
+     </section>
+     <h1>Business Proposal Application</h1>
      <form method="post" action="/join">
        <fieldset>
          <legend>Prospective Entreprenuer  Information</legend>
@@ -166,6 +188,82 @@
     <script src="js/scripts.js"></script>
     <script src="js/windchill.js"></script>
     <script src="js/modify.js"></script>
+    <script>
+      document.getElementById('signin-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('signin-email').value;
+        const password = document.getElementById('signin-password').value;
+        const response = await fetch('/signin', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const result = await response.json();
+        if (response.ok) {
+          document.getElementById('user-info').textContent = `Signed in as ${result.user.email} (${result.user.role})`;
+          document.getElementById('signout-btn').style.display = 'block';
+          document.getElementById('signin-form').style.display = 'none';
+          document.getElementById('register-form').style.display = 'none';
+          if (result.user.role === 'admin') {
+            document.getElementById('admin-section').style.display = 'block';
+          }
+        } else {
+          alert(result.message);
+        }
+      });
+
+      document.getElementById('register-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('register-email').value;
+        const password = document.getElementById('register-password').value;
+        const response = await fetch('/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+        const result = await response.json();
+        alert(result.message);
+      });
+
+      document.getElementById('signout-btn').addEventListener('click', async () => {
+        const response = await fetch('/signout', { method: 'POST' });
+        const result = await response.json();
+        if (response.ok) {
+          document.getElementById('user-info').textContent = '';
+          document.getElementById('signout-btn').style.display = 'none';
+          document.getElementById('signin-form').style.display = 'block';
+          document.getElementById('register-form').style.display = 'block';
+          document.getElementById('admin-section').style.display = 'none';
+          document.getElementById('applications-list').innerHTML = '';
+        }
+      });
+
+      // Check if already signed in
+      fetch('/user').then(res => res.json()).then(user => {
+        if (user) {
+          document.getElementById('user-info').textContent = `Signed in as ${user.email} (${user.role})`;
+          document.getElementById('signout-btn').style.display = 'block';
+          document.getElementById('signin-form').style.display = 'none';
+          document.getElementById('register-form').style.display = 'none';
+          if (user.role === 'admin') {
+            document.getElementById('admin-section').style.display = 'block';
+          }
+        }
+      });
+
+      document.getElementById('view-applications-btn').addEventListener('click', async () => {
+        const response = await fetch('/applications');
+        const applications = await response.json();
+        if (response.ok) {
+          const list = document.getElementById('applications-list');
+          list.innerHTML = '<h4>Applications:</h4>' + applications.map(app => 
+            `<div><strong>${app.fname} ${app.lname}</strong> - ${app.email} - ${app.business}</div>`
+          ).join('');
+        } else {
+          alert(applications.message);
+        }
+      });
+    </script>
 </body>
 
 </html>
